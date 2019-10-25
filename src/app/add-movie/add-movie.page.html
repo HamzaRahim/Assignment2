@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button slot="start" [routerLink]="['/']" routerDirection="back">
+            <ion-back-button></ion-back-button>
+            <
+        </ion-button>
+        <ion-title>Add Movie</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form onsubmit="addingMovie()">
+        <ion-list>
+            <ion-item>
+                <ion-label>
+                    Name
+                    <ion-text>*</ion-text>
+                </ion-label>
+                <ion-input type="text" oninput="handle1(event)"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    Director
+                    <ion-text>*</ion-text>
+                </ion-label>
+                <ion-input type="text" oninput="handle2(event)"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    Description
+                    <ion-text color="light">(optional)</ion-text>
+                </ion-label>
+                <ion-textarea></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <div>
+            <ion-button type="submit">Submit</ion-button>
+        </div>
+    </form>
+</ion-content>
